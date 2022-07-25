@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'roteamento';
+  constructor(private router: Router){}
+
+  irPage2(){
+    this.router.navigate(['c2', '3']) // roteando dentro de metodos
+  }
 }
